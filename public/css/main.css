@@ -1,6 +1,100 @@
+body {
+  width: 50%;
+  margin: 0 auto;
+  text-align: center;
+  background-color: black;
+  color: white;
+}
+
+header {
+  margin-top: 100px;
+}
+
 .earth {
-  width: 100px;
-  height: 100px;
   background-image: url('../images/earth.jpg');
   background-size: cover;
+}
+
+nav.planets-menu {
+  /* background-color: rgba(204, 0, 0, 0.75) ; */
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 40px;
+}
+
+nav a {
+  color: white;
+}
+
+nav a:hover {
+  color: blue;
+  cursor: pointer;
+}
+
+.mercury {
+  background-image: url('../images/mercury.jpg');
+  background-size: cover;
+}
+
+.venus {
+  background-image: url('../images/venus.jpg');
+  background-size: cover;
+}
+
+.mars {
+  background-image: url('../images/mars.jpg');
+  background-size: cover;
+}
+
+.jupiter {
+  background-image: url('../images/jupiter.jpg');
+  background-size: cover;
+}
+
+.saturn {
+  background-image: url('../images/saturn.jpg');
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-color: black;
+}
+
+.uranus {
+  background-image: url('../images/uranus.jpg');
+  background-size: cover;
+}
+.neptune {
+  background-image: url('../images/neptune.jpg');
+  background-size: cover;
+}
+
+.planet-details {
+  width: 100%;
+  /* background-color: orange; */
+  display: flex;
+}
+
+.info {
+  width: 50%;
+  height: 320px;
+}
+
+.info p:first-child {
+  margin-top: 40px;
+  font-size: 30px;
+  font-weight: 700;
+}
+
+
+.picture {
+  width: 50%;
+  height: 320px;
+  border: 2px double black;
+  transition: 2s;
+}
+
+.picture:hover {
+  transform:scale(2);
+  border: 2px double white;
+  transition: 2s;
 }

@@ -12,8 +12,12 @@ PlanetInfo.prototype.bindEvents = function() {
 };
 
 PlanetInfo.prototype.render = function(planet) {
+
+  const info = document.createElement('div');
+  info.classList.add('info');
+
   const infoName = document.createElement('p');
-  infoName.textContent = `Name: ${planet.name}`;
+  infoName.textContent = `${planet.name}`;
 
   const infoOrbit = document.createElement('p');
   infoOrbit.textContent = `Orbit: ${planet.orbit}`;
@@ -32,18 +36,41 @@ PlanetInfo.prototype.render = function(planet) {
 
 
   this.container.innerHTML='';
-  this.container.appendChild(infoName);
-  this.container.appendChild(infoOrbit);
-  this.container.appendChild(infoSurface);
-  this.container.appendChild(infoVolume);
-  this.container.appendChild(infoGravity);
-  this.container.appendChild(infoMoons);
+  this.container.appendChild(info);
+  info.appendChild(infoName);
+  info.appendChild(infoOrbit);
+  info.appendChild(infoSurface);
+  info.appendChild(infoVolume);
+  info.appendChild(infoGravity);
+  info.appendChild(infoMoons);
 
 
   const planetPicture = document.createElement('div');
+  planetPicture.classList.add('picture');
   this.container.appendChild(planetPicture);
   if (planet.name === "Earth") {
     planetPicture.classList.add('earth');
+  }
+  if (planet.name === "Mercury") {
+    planetPicture.classList.add('mercury');
+  }
+  if (planet.name === "Venus") {
+    planetPicture.classList.add('venus');
+  }
+  if (planet.name === "Mars") {
+    planetPicture.classList.add('mars');
+  }
+  if (planet.name === "Jupiter") {
+    planetPicture.classList.add('jupiter');
+  }
+  if (planet.name === "Saturn") {
+    planetPicture.classList.add('saturn');
+  }
+  if (planet.name === "Uranus") {
+    planetPicture.classList.add('uranus');
+  }
+  if (planet.name === "Neptune") {
+    planetPicture.classList.add('neptune');
   }
 }
 
