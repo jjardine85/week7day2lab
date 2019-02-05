@@ -38,6 +38,13 @@ PlanetInfo.prototype.render = function(planet) {
   this.container.appendChild(infoVolume);
   this.container.appendChild(infoGravity);
   this.container.appendChild(infoMoons);
+
+
+  const planetPicture = document.createElement('div');
+  this.container.appendChild(planetPicture);
+  if (planet.name === "Earth") {
+    planetPicture.classList.add('earth');
+  }
 }
 
 module.exports = PlanetInfo;
