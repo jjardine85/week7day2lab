@@ -4,6 +4,7 @@ body {
   text-align: center;
   background-color: black;
   color: white;
+  font-family: Sans-serif;
 }
 
 header {
@@ -12,7 +13,9 @@ header {
 
 .earth {
   background-image: url('../images/earth.jpg');
-  background-size: cover;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
 }
 
 nav.planets-menu {
@@ -20,6 +23,7 @@ nav.planets-menu {
   display: flex;
   justify-content: space-between;
   margin-bottom: 40px;
+  flex-wrap: wrap;
 }
 
 nav a {
@@ -33,22 +37,30 @@ nav a:hover {
 
 .mercury {
   background-image: url('../images/mercury.jpg');
-  background-size: cover;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
 }
 
 .venus {
   background-image: url('../images/venus.jpg');
-  background-size: cover;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
 }
 
 .mars {
   background-image: url('../images/mars.jpg');
-  background-size: cover;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
 }
 
 .jupiter {
   background-image: url('../images/jupiter.jpg');
-  background-size: cover;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
 }
 
 .saturn {
@@ -61,17 +73,22 @@ nav a:hover {
 
 .uranus {
   background-image: url('../images/uranus.jpg');
-  background-size: cover;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
 }
 .neptune {
   background-image: url('../images/neptune.jpg');
-  background-size: cover;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
 }
 
 .planet-details {
   width: 100%;
   /* background-color: orange; */
   display: flex;
+
 }
 
 .info {
@@ -97,4 +114,41 @@ nav a:hover {
   transform:scale(2);
   border: 2px double white;
   transition: 2s;
+}
+
+@media only screen and  (max-width: 720px) {
+ .planet-details {
+   display: inline;
+ }
+  .info {
+  width: auto;
+  height: 260px;
+}
+  .picture {
+    width: 100%;
+    height: 160px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+  html {
+    width: 100%;
+  }
+  body {
+    margin: 0;
+    text-align: center;
+    width: 100%;
+  }
+  h1 {
+    font-size: 1.2em;
+    width: 100%;
+  }
+  nav a {
+    font-size: 14px;
+    width: 25%;
+    padding: 10px 0 ;
+  }
+  header {
+    margin-top: 50px;
+  }
 }
